@@ -8,6 +8,9 @@ import org.example.expert.domain.user.service.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.io.IOException;
 
 @RestController
 @RequiredArgsConstructor
@@ -23,5 +26,14 @@ public class UserController {
     @PutMapping("/users")
     public void changePassword(@AuthenticationPrincipal AuthUser authUser, @RequestBody UserChangePasswordRequest userChangePasswordRequest) {
         userService.changePassword(authUser.getId(), userChangePasswordRequest);
+    }
+
+    @PostMapping("/users/{userId}/profile")
+    public void updateProfile(
+            @AuthenticationPrincipal AuthUser authUser,
+            @RequestPart(value = "file", required = false) MultipartFile multipartFile,
+            @PathVariable Long userId
+    ) throws IOException {
+        userService.updateProfile(authUser, multipartFile, userId);
     }
 }

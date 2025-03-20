@@ -25,6 +25,11 @@
 ### 12-2. RDS
 - <img width="1148" alt="rds 생성" src="https://github.com/user-attachments/assets/e74b47db-6dc5-4a3e-aed4-0dcd6217f317" />
 
+### 12-3. S3
+#### s3 업로드
+- <img width="1403" alt="s3 이미지 업로드" src="https://github.com/user-attachments/assets/a5967551-3b48-4261-9937-27596365c4be" />
+#### 회원 프로필 업데이트
+- <img width="726" alt="회원 프로필 업로드" src="https://github.com/user-attachments/assets/810e6ab6-68f8-428a-bb0e-73c81558315f" />
 
 ## 📚 STACKS
 <div align=center> 
