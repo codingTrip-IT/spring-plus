@@ -53,16 +53,19 @@ public class TodoRepositoryImpl implements TodoRepositoryCustom{
         List<TodoSearchResponse> content = queryFactory
                 .select(new QTodoSearchResponse(
                         todo.title,
-                        JPAExpressions.select(manager.count()).from(manager).where(manager.todo.eq(todo)),
-                        JPAExpressions.select(comment.count()).from(comment).where(comment.todo.eq(todo))
+                        manager.id.countDistinct(),
+                        comment.id.countDistinct()
                 ))
                 .from(todo)
+                .leftJoin(todo.managers, manager)
+                .leftJoin(todo.comments, comment)
                 .where(
                         titleContains(condition.getTitle()),
                         createdAtGoe(condition.getCreatedAtGoe()),
                         createdAtLoe(condition.getCreatedAtLoe()),
                         managerNicknameContains(condition.getManagerNickname())
                 )
+                .groupBy(todo.id)  // 중복 제거
                 .orderBy(todo.createdAt.desc())
                 .offset(pageable.getOffset())
                 .limit(pageable.getPageSize())
@@ -71,16 +74,19 @@ public class TodoRepositoryImpl implements TodoRepositoryCustom{
     }
 
     private Long getTotal(TodoSearchCondition condition) {
-        Long total = queryFactory
+        Long total = Optional.ofNullable(queryFactory
                 .select(todo.count())
                 .from(todo)
+                .leftJoin(todo.managers, manager)
+                .leftJoin(todo.comments, comment)
                 .where(
                         titleContains(condition.getTitle()),
                         createdAtGoe(condition.getCreatedAtGoe()),
                         createdAtLoe(condition.getCreatedAtLoe()),
                         managerNicknameContains(condition.getManagerNickname())
                 )
-                .fetchOne();
+                .fetchOne())
+                .orElse(0L);
 
         return total;
     }
