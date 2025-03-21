@@ -34,8 +34,8 @@ public class TodoRepositoryImpl implements TodoRepositoryCustom{
 
         Todo result = queryFactory
                 .selectFrom(todo)
-                .leftJoin(todo.user, user)
-                .where(todo.id.eq(todoId)).fetchJoin()
+                .leftJoin(todo.user, user).fetchJoin()
+                .where(todo.id.eq(todoId))
                 .fetchOne();
 
         return Optional.ofNullable(result);
