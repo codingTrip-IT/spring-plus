@@ -11,19 +11,13 @@ import java.time.LocalDate;
 public interface TodoRepository extends JpaRepository<Todo, Long>, TodoRepositoryCustom{
 
     @Query("SELECT t FROM Todo t LEFT JOIN FETCH t.user u " +
-            "WHERE (coalesce(:weather, NULL) IS NULL OR t.weather = :weather) " +
-            "AND CASE WHEN :startDate IS NOT NULL AND :endDate IS NOT NULL " +
-            "THEN (t.modifiedAt >= DATE(:startDate) AND t.modifiedAt < DATE(:endDate)) " +
-            "WHEN :startDate is null AND :endDate is not null " +
-            "THEN (t.modifiedAt < DATE(:endDate)) " +
-            "WHEN :startDate is not null AND :endDate is null " +
-            "THEN (t.modifiedAt >= DATE(:startDate)) " +
-            "WHEN :startDate is null AND :endDate is null " +
-            "THEN (1=1) " +
-            "END " +
+            "WHERE (:weather IS NULL OR t.weather = :weather) " +
+            "AND (:startDate IS NULL OR t.modifiedAt >= DATE(:startDate)) " +
+            "AND (:endDate IS NULL OR t.modifiedAt < DATE(:endDate)) " +
             "ORDER BY t.modifiedAt DESC")
     Page<Todo> findAllByOrderByModifiedAtDesc(Pageable pageable, String weather, LocalDate startDate, LocalDate endDate);
 
+    /* querydsl로 수정*/
    /* @Query("SELECT t FROM Todo t " +
             "LEFT JOIN t.user " +
             "WHERE t.id = :todoId")
