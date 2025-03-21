@@ -11,6 +11,9 @@ import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
 
+/**
+ * AdminAccessLoggingAspect : 관리자 접근 로깅 AOP 클래스
+ * */
 @Slf4j
 @Aspect
 @Component
