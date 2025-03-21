@@ -10,7 +10,8 @@ import org.example.expert.domain.user.enums.UserRole;
 @Getter
 @Entity
 @NoArgsConstructor
-@Table(name = "users")
+/* 인덱스 반영 */
+@Table(name = "users", indexes = @Index(name = "idx_nickname", columnList = "nickname"))
 public class User extends Timestamped {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,6 +23,7 @@ public class User extends Timestamped {
     private UserRole userRole;
     /* nickname 추가 */
     private String nickname;
+    /* 프로필 이미지 추가 */
     private String profileImageUrl;
 
     public User(String email, String password, UserRole userRole) {

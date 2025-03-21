@@ -8,9 +8,10 @@
 ## 🛠 목차
 
 1. [👩🏻‍ AWS](#-AWS)
-2. [📚 STACKS](#-STACKS)
-3. [💥 한계점](#-한계점)
-4. [📞 Contact](#-Contact)
+2. [👩🏻‍ 대용량 데이터 처리](#-대용량-데이터-처리)
+3. [📚 STACKS](#-STACKS)
+4. [💥 한계점](#-한계점)
+5. [📞 Contact](#-Contact)
    <br>
 
 ## 👩🏻‍ AWS
@@ -31,6 +32,14 @@
 #### 회원 프로필 업데이트
 - <img width="726" alt="회원 프로필 업로드" src="https://github.com/user-attachments/assets/810e6ab6-68f8-428a-bb0e-73c81558315f" />
 
+## 👩🏻‍ 대용량 데이터 처리
+### 13. 대용량 데이터 처리
+#### 100만 건 데이터 생성
+- <img width="231" alt="100만 건 데이터 생성" src="https://github.com/user-attachments/assets/36c13737-471e-497f-b9d9-b885092c9695" />
+#### 인덱스 반영 전
+- <img width="725" alt="인덱스 반영 전" src="https://github.com/user-attachments/assets/6bba07ec-b6c1-4a0b-8117-a57872bd61ef" />
+#### 인덱스 반영 후
+- <img width="738" alt="인덱스 반영 후" src="https://github.com/user-attachments/assets/b9bde8c2-4db6-4fa1-91e1-db1def6557b3" />
 ## 📚 STACKS
 <div align=center> 
   <img src="https://img.shields.io/badge/java-007396?style=for-the-badge&logo=java&logoColor=white"> 
@@ -44,6 +53,7 @@
 
 
 ## 💥 한계점
+- 대용량 데이터 처리 속도 개선을 위한 다양한 방법에 대해 알고 싶습니다.
 
 ## 📞 Contact
 - [🚗 Visit codingTrip blog](https://codingtrip.tistory.com/)

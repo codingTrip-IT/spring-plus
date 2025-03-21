@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
+import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
@@ -21,6 +22,11 @@ public class UserController {
     @GetMapping("/users/{userId}")
     public ResponseEntity<UserResponse> getUser(@PathVariable long userId) {
         return ResponseEntity.ok(userService.getUser(userId));
+    }
+
+    @GetMapping("/users")
+    public ResponseEntity<UserResponse> searchUser(@RequestParam String nickname) {
+        return ResponseEntity.ok(userService.searchUser(nickname));
     }
 
     @PutMapping("/users")
