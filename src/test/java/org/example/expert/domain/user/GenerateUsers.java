@@ -13,25 +13,32 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * GenerateUsers : 테스트를 위한 user생성 클래스
+ */
 @SpringBootTest
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-class GenerateUsersTest {
+class GenerateUsers {
 
     @Autowired
     private UserJdbcRepository userJdbcRepository;
+
+    private static final int USER_INSERT_COUNT = 1_000_000;
+    private static final int BATCH_SIZE = 1_000;
 
     @Test
     @Transactional
     @Rollback(value = false)
     void 유저_100만건_생성() {
         List<User> users = new ArrayList<>();
-        for (int i = 0; i < 1_000_000; i++) {
+        for (int i = 0; i < USER_INSERT_COUNT; i++) {
             UserRole userRole = i % 2 == 0 ? UserRole.ROLE_USER : UserRole.ROLE_ADMIN;
-            users.add(new User("email" + i, "password" + i, userRole, "nickname" + i));
+            users.add(new User("email" + i + "@naver.com", "Password" + i, userRole, "nickname" + i));
 
-            if (i % 1_000 == 0 && i > 0) {
+            if (i % BATCH_SIZE == 0 && i > 0) {
                 userJdbcRepository.saveAllUsers(users);
                 users.clear();
+                /* 배치 사이즈마다 0.5초씩 sleep 처리 */
                 try {
                     Thread.sleep(500);
                 } catch (InterruptedException e) {

@@ -23,6 +23,9 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+/**
+ * TodoControllerTest : Todo 컨트롤러를 테스트하는 클래스
+ */
 @WebMvcTest(TodoController.class)
 class TodoControllerTest {
 
