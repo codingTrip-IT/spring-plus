@@ -10,6 +10,9 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+/**
+ * SearchService : 검색 서비스
+ */
 @Service
 @RequiredArgsConstructor
 @Transactional(readOnly = true)

@@ -14,6 +14,9 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter;
 
+/**
+ SecurityConfig : Spring Security 설정 클래스
+ */
 @Configuration
 @RequiredArgsConstructor
 @EnableWebSecurity

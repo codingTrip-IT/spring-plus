@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * GlobalExceptionHandler : 전역 예외 처리를 담당하는 클래스
+ * */
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 

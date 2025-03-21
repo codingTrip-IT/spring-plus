@@ -5,6 +5,10 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+/**
+ * CommentSaveRequest : 댓글 생성 요청 DTO
+ * 필드명 : 내용
+ * */
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor

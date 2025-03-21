@@ -11,6 +11,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * AuthController : 인증 관련 요청을 처리하는 컨트롤러
+ * 회원가입과 로그인
+ */
 @RestController
 @RequiredArgsConstructor
 public class AuthController {

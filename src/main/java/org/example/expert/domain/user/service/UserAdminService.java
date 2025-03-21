@@ -9,6 +9,9 @@ import org.example.expert.domain.user.repository.UserRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+/**
+ * UserAdminService : 사용자 관리자 서비스
+ */
 @Service
 @RequiredArgsConstructor
 public class UserAdminService {

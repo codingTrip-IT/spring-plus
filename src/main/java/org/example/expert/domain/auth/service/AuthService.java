@@ -15,6 +15,10 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+/**
+ * AuthService : 인증 관련 비즈니스 로직을 처리하는 서비스
+ * 회원가입, 로그인
+ */
 @Service
 @RequiredArgsConstructor
 @Transactional(readOnly = true)

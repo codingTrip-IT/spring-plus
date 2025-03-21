@@ -13,6 +13,9 @@ import java.net.URI;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
+/**
+ * WeatherClient : 외부 API에서 날씨 정보를 가져오는 클래스
+ * */
 @Component
 public class WeatherClient {
 

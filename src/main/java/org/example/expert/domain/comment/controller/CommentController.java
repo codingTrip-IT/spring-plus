@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * CommentController: 댓글 컨트롤러
+ */
 @RestController
 @RequiredArgsConstructor
 public class CommentController {

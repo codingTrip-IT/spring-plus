@@ -10,6 +10,9 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
 
+/**
+ * UserJdbcRepository : 사용자 대용량 생성 처리를 위한 JDBC 리포지토리
+ */
 @Repository
 @RequiredArgsConstructor
 public class UserJdbcRepository {

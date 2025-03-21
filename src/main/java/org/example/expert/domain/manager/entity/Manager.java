@@ -6,6 +6,9 @@ import lombok.NoArgsConstructor;
 import org.example.expert.domain.todo.entity.Todo;
 import org.example.expert.domain.user.entity.User;
 
+/**
+ * Manager : 관리자 정보를 나타내는 엔티티
+ */
 @Getter
 @Entity
 @NoArgsConstructor

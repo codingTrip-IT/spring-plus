@@ -8,6 +8,9 @@ import org.springframework.data.jpa.repository.Query;
 
 import java.time.LocalDate;
 
+/**
+ * TodoRepository : 일정 리포지토리
+ */
 public interface TodoRepository extends JpaRepository<Todo, Long>, TodoRepositoryCustom{
 
     @Query("SELECT t FROM Todo t LEFT JOIN FETCH t.user u " +

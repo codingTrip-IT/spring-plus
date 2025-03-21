@@ -6,6 +6,10 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+/**
+ * SigninRequest : 로그인 요청 DTO
+ * 필드명 : 이메일, 비밀번호
+ * */
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor

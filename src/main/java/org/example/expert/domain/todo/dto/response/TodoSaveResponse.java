@@ -3,6 +3,10 @@ package org.example.expert.domain.todo.dto.response;
 import lombok.Getter;
 import org.example.expert.domain.user.dto.response.UserResponse;
 
+/**
+ * TodoSaveResponse : 일정 생성 응답 DTO
+ * 필드명 : 아이디, 제목, 내용, 날씨, 회원
+ */
 @Getter
 public class TodoSaveResponse {
 

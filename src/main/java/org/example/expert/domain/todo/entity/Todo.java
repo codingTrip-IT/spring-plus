@@ -11,6 +11,9 @@ import org.example.expert.domain.user.entity.User;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Todo : 일정 엔티티
+ */
 @Getter
 @Entity
 @NoArgsConstructor

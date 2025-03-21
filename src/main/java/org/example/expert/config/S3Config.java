@@ -9,6 +9,9 @@ import software.amazon.awssdk.auth.credentials.StaticCredentialsProvider;
 import software.amazon.awssdk.regions.Region;
 import software.amazon.awssdk.services.s3.S3Client;
 
+/**
+ S3Config : Amazon S3 서비스 연동을 위한 설정 클래스
+ */
 @Configuration
 public class S3Config {
 

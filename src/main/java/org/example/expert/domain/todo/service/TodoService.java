@@ -19,6 +19,9 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
 
+/**
+ * TodoService : 일정 서비스
+ */
 @Service
 @RequiredArgsConstructor
 @Transactional(readOnly = true)

@@ -19,6 +19,9 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
 
+/**
+ * JwtAuthenticationFilter: JWT 인증을 처리하는 필터 클래스
+ */
 @Slf4j
 @Component
 @RequiredArgsConstructor

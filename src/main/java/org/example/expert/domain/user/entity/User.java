@@ -7,6 +7,9 @@ import org.example.expert.domain.common.dto.AuthUser;
 import org.example.expert.domain.common.entity.Timestamped;
 import org.example.expert.domain.user.enums.UserRole;
 
+/**
+ * User : 사용자 엔티티
+ */
 @Getter
 @Entity
 @NoArgsConstructor

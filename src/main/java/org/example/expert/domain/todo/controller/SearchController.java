@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * SearchController : 검색 컨트롤러
+ */
 @RestController
 @RequiredArgsConstructor
 public class SearchController {

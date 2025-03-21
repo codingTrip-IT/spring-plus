@@ -11,6 +11,9 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 
+/**
+ * AwsS3Controller : aws s3 관련 컨트롤러
+ */
 @RestController
 @RequiredArgsConstructor
 public class AwsS3Controller {

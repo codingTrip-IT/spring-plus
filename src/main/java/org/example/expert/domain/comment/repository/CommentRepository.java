@@ -7,6 +7,9 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
+/**
+ * CommentRepository : 댓글 리포지토리
+ */
 public interface CommentRepository extends JpaRepository<Comment, Long> {
 
     @Query("SELECT c FROM Comment c JOIN FETCH c.user WHERE c.todo.id = :todoId")

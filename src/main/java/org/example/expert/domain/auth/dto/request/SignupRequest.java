@@ -6,6 +6,10 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+/**
+ * SignupRequest : 회원가입 요청 DTO
+ * 필드명 : 이메일, 비밀번호, 사용자권한, 닉네임
+ * */
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor

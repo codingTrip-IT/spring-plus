@@ -5,6 +5,10 @@ import org.example.expert.domain.user.dto.response.UserResponse;
 
 import java.time.LocalDateTime;
 
+/**
+ * TodoResponse : 일정 응답 DTO
+ * 필드명 : 아이디, 제목, 내용, 날씨, 회원, 생성일, 수정일
+ */
 @Getter
 public class TodoResponse {
 

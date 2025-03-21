@@ -16,6 +16,9 @@ import software.amazon.awssdk.services.s3.model.PutObjectRequest;
 import java.io.IOException;
 import java.net.URL;
 
+/**
+ * AwsS3Service : aws s3 관련 서비스
+ */
 @Slf4j
 @Service
 @RequiredArgsConstructor

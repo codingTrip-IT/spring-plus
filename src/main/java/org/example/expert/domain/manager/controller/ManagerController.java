@@ -13,6 +13,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * ManagerController : 관리자 컨트롤러
+ */
 @RestController
 @RequiredArgsConstructor
 public class ManagerController {

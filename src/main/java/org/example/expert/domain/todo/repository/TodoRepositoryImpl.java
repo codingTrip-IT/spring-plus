@@ -23,6 +23,9 @@ import static org.example.expert.domain.todo.entity.QTodo.todo;
 import static org.example.expert.domain.user.entity.QUser.user;
 import static org.springframework.util.StringUtils.hasText;
 
+/**
+ * TodoRepositoryImpl : 일정 리포지토리(querydsl)
+ */
 @Repository
 @RequiredArgsConstructor
 public class TodoRepositoryImpl implements TodoRepositoryCustom{

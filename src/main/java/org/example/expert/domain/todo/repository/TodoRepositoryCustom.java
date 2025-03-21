@@ -8,6 +8,9 @@ import org.springframework.data.domain.Pageable;
 
 import java.util.Optional;
 
+/**
+ * TodoRepositoryCustom : 일정 리포지토리 커스텀 인터페이스
+ */
 public interface TodoRepositoryCustom {
     Optional<Todo> findByIdWithUser(Long todoId);
     Page<TodoSearchResponse> search(TodoSearchCondition condition, Pageable pageable);

@@ -16,6 +16,9 @@ import java.security.Key;
 import java.util.Base64;
 import java.util.Date;
 
+/**
+ * JwtUtil: JWT 생성 및 검증을 위한 유틸리티 클래스
+ */
 @Slf4j(topic = "JwtUtil")
 @Component
 public class JwtUtil {

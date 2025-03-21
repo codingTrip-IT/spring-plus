@@ -3,6 +3,9 @@ package org.example.expert.config;
 import org.example.expert.domain.common.dto.AuthUser;
 import org.springframework.security.authentication.AbstractAuthenticationToken;
 
+/**
+ JwtAuthenticationToken: JWT 인증을 위한 커스텀 Authentication 토큰 클래스
+ */
 public class JwtAuthenticationToken extends AbstractAuthenticationToken {
 
     private final AuthUser authUser;

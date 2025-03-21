@@ -6,6 +6,9 @@ import jakarta.persistence.PersistenceContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * JPAConfiguration : JPA 관련 설정을 위한 Configuration 클래스
+ */
 @Configuration
 public class JPAConfiguration {
 

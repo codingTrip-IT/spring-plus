@@ -18,6 +18,9 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * CommentService : 댓글 서비스
+ */
 @Service
 @RequiredArgsConstructor
 @Transactional(readOnly = true)

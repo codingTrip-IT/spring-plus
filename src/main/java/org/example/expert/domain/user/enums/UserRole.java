@@ -6,6 +6,10 @@ import org.example.expert.domain.common.exception.InvalidRequestException;
 
 import java.util.Arrays;
 
+/**
+ * UserRole : 사용자의 역할을 정의하는 enum 클래스
+ * Spring Security에 맞게 ROLE_형식으로 수정
+ */
 @Getter
 @RequiredArgsConstructor
 public enum UserRole {
